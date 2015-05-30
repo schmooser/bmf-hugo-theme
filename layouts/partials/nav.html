@@ -1,0 +1,12 @@
+<nav>
+  {{ $baseurl := .Site.BaseURL }}
+  {{ if (or (not (eq (relURL .URL) ("/" | safeHTML))) .IsPage) }}
+   <a href="{{ $baseurl }}">Home</a>
+  {{ end }}
+
+  {{ range $index, $section := .Site.Sections }}
+    <a href="{{ $baseurl }}{{ $index }}">{{ $index | title }}s</a>
+  {{ end }}
+
+</nav>
+

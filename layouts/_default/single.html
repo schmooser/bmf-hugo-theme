@@ -1,0 +1,14 @@
+{{ partial "header.html" . }}
+<header>
+  <h1>{{ .Title }}</h1>
+  <aside>
+    Posted by {{ .Site.Author.Name }} on {{ .Date.Format "2 January 2006" }}
+    <a href="{{ .Permalink }}">&infin;</a>
+  </aside>
+</header>
+  <article>
+    {{ .Content }}
+  </article>
+{{ partial "aside.html" . }}
+{{ partial "nav.html" . }}
+{{ partial "footer.html" . }}
