@@ -2,8 +2,7 @@
 <header>
   <h1>{{ .Title }}</h1>
   <aside>
-    Posted by {{ .Site.Author.Name }} on {{ .Date.Format "2 January 2006" }}
-    <a href="{{ .Permalink }}">&infin;</a>
+    Posted by {{ .Site.Author.Name }} on <a href="{{ .Permalink }}">{{ .Date.Format "2 January 2006" }}</a>
   </aside>
 </header>
   <article>
